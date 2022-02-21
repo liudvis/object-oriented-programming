@@ -26,34 +26,19 @@ int validateGradeInput(int grade) {
     return grade;
 }
 
-int validateNumberOfStudentsInput(int numberOfStudents) {
+int validateNaturalNumberInput(int number) {
     while (true) {
-        if (cin >> numberOfStudents && numberOfStudents > 0) {
+        if (cin >> number && number > 0) {
             break;
-        } else if (numberOfStudents == -1) {
+        } else if (number == -1) {
             return 0;
         } else {
-            cout << "Neteisingas studentu skaicius. Iveskite naturaluji skaiciu: ";
+            cout << "Neteisingai ivestas skaicius. Iveskite naturaluji skaiciu: ";
             cin.clear();
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
     }
-    return numberOfStudents;
-}
-
-int validateNumberOfGradeInput(int numberOfGrades) {
-    while (true) {
-        if (cin >> numberOfGrades && numberOfGrades > 0) {
-            break;
-        } else if (numberOfGrades == -1) {
-            return 0;
-        } else {
-            cout << "Neteisingas pažymių skaicius. Iveskite naturaluji skaiciu: ";
-            cin.clear();
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-    }
-    return numberOfGrades;
+    return number;
 }
 
 bool isNumber(string string) {

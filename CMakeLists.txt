@@ -3,4 +3,4 @@ project(student_grades)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(student_grades main.cpp InputValidator.h Calculator.h Output.h)
+add_executable(student_grades main.cpp validator/InputValidator.h calculator/Calculator.h printer/Output.h)
